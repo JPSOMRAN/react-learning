@@ -10,6 +10,9 @@ function Home() {
     ];
  
     return (<div className="home">
+        <form onSubmit={} className="search-form">
+            
+        </form>
         <div className="movies-grid">
             {movies.map(movie=>(
              <MovieCard movie={movie} key={movie.id}/>))}
