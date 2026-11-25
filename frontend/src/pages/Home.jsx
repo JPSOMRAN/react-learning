@@ -8,10 +8,13 @@ function Home() {
         {id:3 , title:"Ghostbusters" , release_date:"2023"},
         
     ];
- 
+    
+    const handleSearch=()=>{
+
+    }
     return (<div className="home">
-        <form onSubmit={} className="search-form">
-            
+        <form onSubmit={handleSearch} className="search-form">
+            <input type="text" placeholder="Search For Movies...." className="search-input"/>
         </form>
         <div className="movies-grid">
             {movies.map(movie=>(
