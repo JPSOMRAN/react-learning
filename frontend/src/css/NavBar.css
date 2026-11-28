@@ -57,3 +57,23 @@
     padding: 0.5rem;
   }
 }
+.nav-auth-btn {
+  background-color: #161b26;
+  color: #ffffff;
+  border: 1px solid #2a3142;
+  padding: 0.42rem 0.85rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.nav-auth-btn.signin {
+  background-color: #e50914;
+  border-color: #e50914;
+}
+
+.nav-auth-btn:hover {
+  opacity: 0.9;
+}

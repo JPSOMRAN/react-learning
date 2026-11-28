@@ -1,13 +1,21 @@
 import "./css/App.css";
 import Favourites from "./pages/Favourites";
 import Home from "./pages/Home";
+import LandingAuth from "./pages/LandingAuth";
 import { Routes, Route } from "react-router-dom";
 import { MovieProvider } from "./context/MovieContext";
+import { AuthProvider, useAuth } from "./context/AuthContext";
 import NavBar from "./Components/NavBar";
 
-function App() {
+function AppShell() {
+  const { hasEnteredApp } = useAuth();
+
+  if (!hasEnteredApp) {
+    return <LandingAuth />;
+  }
+
   return (
-    <MovieProvider>
+    <div>
       <NavBar />
       <main className="main-content">
         <Routes>
@@ -15,7 +23,17 @@ function App() {
           <Route path="/favourites" element={<Favourites />} />
         </Routes>
       </main>
-    </MovieProvider>
+    </div>
+  );
+}
+
+function App() {
+  return (
+    <AuthProvider>
+      <MovieProvider>
+        <AppShell />
+      </MovieProvider>
+    </AuthProvider>
   );
 }
 

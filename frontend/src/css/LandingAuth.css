@@ -1,0 +1,347 @@
+.landing-wrapper {
+  position: relative;
+  min-height: 100vh;
+  background-color: #111622;
+  color: #ffffff;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.collage-backdrop {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.collage-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.86;
+  filter: brightness(1.12) saturate(1.18) contrast(1.04);
+  animation: subtleZoom 24s ease-in-out infinite alternate;
+}
+
+@keyframes subtleZoom {
+  from {
+    transform: scale(1.02);
+  }
+  to {
+    transform: scale(1.08);
+  }
+}
+
+.landing-vignette {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgba(17, 22, 34, 0.14) 0%,
+      rgba(14, 18, 28, 0.45) 60%,
+      rgba(11, 13, 18, 0.82) 100%
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(11, 13, 18, 0.52) 0%,
+      rgba(11, 13, 18, 0.22) 45%,
+      rgba(11, 13, 18, 0.72) 88%,
+      rgba(11, 13, 18, 0.92) 100%
+    );
+  pointer-events: none;
+}
+
+.landing-header {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 3rem;
+}
+
+.landing-logo {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: #ffffff;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.75);
+}
+
+.landing-logo span {
+  color: #e50914;
+}
+
+.landing-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.skip-login-top-btn {
+  background: rgba(24, 30, 44, 0.82);
+  color: #f4f4f5;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  backdrop-filter: blur(8px);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.skip-login-top-btn:hover {
+  border-color: #ffffff;
+  background: rgba(36, 45, 66, 0.92);
+}
+
+.signin-top-btn {
+  background-color: #e50914;
+  color: #ffffff;
+  border: none;
+  padding: 0.52rem 1.15rem;
+  border-radius: 6px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(229, 9, 20, 0.35);
+  transition: background-color 0.2s ease;
+}
+
+.signin-top-btn:hover {
+  background-color: #f6121d;
+}
+
+.landing-center {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1.25rem 4.5rem;
+  text-align: center;
+}
+
+.landing-hero-box {
+  max-width: 700px;
+  padding: 2.25rem 2rem;
+  border-radius: 16px;
+  background: rgba(14, 18, 28, 0.58);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55);
+}
+
+.landing-hero-box h1 {
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.15;
+  margin: 0 0 1rem;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.85);
+}
+
+.landing-sub {
+  font-size: 1.12rem;
+  color: #f4f4f5;
+  margin: 0 0 1.25rem;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.85);
+}
+
+.landing-prompt {
+  font-size: 0.98rem;
+  color: #e4e4e7;
+  margin: 0 0 1rem;
+}
+
+.get-started-form {
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.landing-email-input {
+  flex: 1;
+  min-width: 260px;
+  max-width: 380px;
+  padding: 0.95rem 1.1rem;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  background: rgba(18, 24, 36, 0.85);
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+.landing-email-input:focus {
+  outline: none;
+  border-color: #ffffff;
+}
+
+.get-started-btn {
+  background-color: #e50914;
+  color: #ffffff;
+  border: none;
+  padding: 0.95rem 1.65rem;
+  border-radius: 6px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.2s ease;
+}
+
+.get-started-btn:hover {
+  background-color: #f6121d;
+}
+
+.skip-divider {
+  margin: 1.25rem auto 0.9rem;
+  color: #d4d4d8;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.skip-hero-btn {
+  background: rgba(24, 31, 46, 0.88);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 0.7rem 1.4rem;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.skip-hero-btn:hover {
+  border-color: #22c55e;
+  color: #4ade80;
+  transform: translateY(-1px);
+}
+
+/* Sign In / Sign Up Card */
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  background: rgba(16, 21, 32, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 12px;
+  padding: 2.25rem 2rem;
+  text-align: left;
+  backdrop-filter: blur(14px);
+}
+
+.auth-card h2 {
+  margin: 0 0 1.4rem;
+  font-size: 1.75rem;
+}
+
+.auth-card-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.95rem;
+}
+
+.auth-input {
+  padding: 0.9rem 1rem;
+  border-radius: 6px;
+  border: 1px solid #475569;
+  background: rgba(22, 28, 42, 0.9);
+  color: #ffffff;
+  font-size: 0.98rem;
+}
+
+.auth-input:focus {
+  outline: none;
+  border-color: #e50914;
+}
+
+.auth-submit-btn {
+  margin-top: 0.35rem;
+  background-color: #e50914;
+  color: #ffffff;
+  border: none;
+  padding: 0.9rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.auth-submit-btn:hover {
+  background-color: #f6121d;
+}
+
+.auth-card-footer {
+  margin-top: 1.25rem;
+  color: #d4d4d8;
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.link-btn {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: underline;
+}
+
+.skip-card-btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: #e4e4e7;
+  padding: 0.65rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.skip-card-btn:hover {
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+.landing-error {
+  color: #f87171;
+  font-size: 0.88rem;
+  margin-top: 0.6rem;
+}
+
+/* Curved Crimson Arc at Bottom */
+.landing-curve-divider {
+  position: relative;
+  z-index: 4;
+  height: 44px;
+  width: 110%;
+  left: -5%;
+  border-top: 4px solid #e50914;
+  border-top-left-radius: 50% 100%;
+  border-top-right-radius: 50% 100%;
+  background: radial-gradient(
+    ellipse at top,
+    rgba(59, 130, 246, 0.34) 0%,
+    rgba(17, 22, 34, 0.85) 70%
+  );
+}
+
+@media (max-width: 640px) {
+  .landing-header {
+    padding: 1.1rem 1.25rem;
+  }
+  .landing-hero-box {
+    padding: 1.6rem 1.25rem;
+  }
+}
