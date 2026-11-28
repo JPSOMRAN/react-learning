@@ -10,7 +10,9 @@ function Home() {
         
     ];
     
-    const handleSearch=()=>{
+    const handleSearch=(e)=>{
+        e.preventDefault()
+        alert(searchQuery)
 
     }
     return (<div className="home">
