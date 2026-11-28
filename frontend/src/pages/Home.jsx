@@ -1,7 +1,7 @@
 import MovieCard from "../Components/MovieCard"
 import {useState} from "react"
 function Home() {
-    
+    const [searchQuery,setSearchQuery]=
     const movies=[
         
         {id:1 , title:"John Wick" , release_date:"2015"},
